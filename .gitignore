@@ -1,4 +1,4 @@
-/.phpunit.cache
+# Ignorer les dossiers et fichiers spécifiques
 /node_modules
 /public/build
 /public/hot

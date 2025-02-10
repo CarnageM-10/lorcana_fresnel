@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         //Création de 10 users random
-        User::factory(10)->create();
+       // User::factory(10)->create();
 
         //Création de l'utilisateur brybry
         User::factory()->create([
@@ -26,13 +26,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         //Création des sets avec 100 cartes associées
-        Set::factory(6)
-            ->has(Card::factory()->count(100))
-            ->create();
+       // Set::factory(6)
+           // ->has(Card::factory()->count(100))
+            //->create();
 
             
         // Génère 10 entrées dans la wishlist aléatoirement
-        Wishlist::factory()->count(10)->create();
+        //Wishlist::factory()->count(10)->create();
             
     }
 }
