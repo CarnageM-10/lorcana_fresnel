@@ -6,6 +6,12 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\Api\CardController;
 use App\Http\Controllers\Api\SetController;
+use App\Http\Controllers\CollectionController;
+
+// Routes de la Collection (nécessite authentification)
+Route::middleware('auth:sanctum')->post('/collection/add', [CollectionController::class, 'add']);
+Route::middleware('auth:sanctum')->post('/collection/remove', [CollectionController::class, 'remove']);
+Route::middleware('auth:sanctum')->get('/collection', [CollectionController::class, 'list']);
 
 // Routes d'authentification
 Route::post('/register', [AuthController::class, 'register']);

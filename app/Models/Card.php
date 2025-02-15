@@ -36,6 +36,12 @@ class Card extends Model
         return $this->belongsToMany(User::class, 'wishlist');
     }
 
+    public function collectionUsers()
+    {
+        return $this->belongsToMany(User::class, 'collections');
+    }
+    
+
     /**
      * Create a new factory instance for the model.
      */
